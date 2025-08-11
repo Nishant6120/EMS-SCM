@@ -1,0 +1,18 @@
+// Button for toggling activation
+const toggleBtnClass = emp.isActive ? 'btn-danger' : 'btn-success';
+const toggleBtnText = emp.isActive ? '' : '';
+const toggleBtnIcon = emp.isActive ? 'fa-times-circle' : 'fa-check-circle';
+const toggleBtnHtml = `<button class="btn btn-sm ${toggleBtnClass} toggle-employee-status-btn" data-id="${emp.id}" data-status="${!emp.isActive}"><i class="fas ${toggleBtnIcon}"></i> ${toggleBtnText}</button>`;
+
+
+
+
+Heading should be "Status & Updates" and dropdown will be,
+
+1. View task status - default
+
+2. Hourly Updates
+
+
+
+which option will be selected by dropdown that page should be appear below...
