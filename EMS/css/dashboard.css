@@ -1,0 +1,324 @@
+/*
+ * General body and layout styling
+ */
+body {
+    overflow-x: hidden;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content-area {
+    margin-top: 70px; /* Adjust based on navbar height */
+    padding-top: 25px;
+}
+
+.content-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.master-content-pane {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+}
+
+/*
+ * Navbar styling
+ */
+#main-admin-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, #007bff, #0056b3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+#main-admin-navbar .navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#main-admin-navbar .navbar-logo {
+    height: 35px;
+    width: 250px;
+    filter: brightness(0) invert(1);
+}
+
+#main-admin-navbar .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 0.7rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#main-admin-navbar .navbar-nav .nav-link.active,
+#main-admin-navbar .navbar-nav .nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+}
+
+#main-admin-navbar .dropdown-menu {
+    background-color: #007bff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#main-admin-navbar .dropdown-menu .dropdown-item {
+    color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.3s;
+}
+
+#main-admin-navbar .dropdown-menu .dropdown-item:hover,
+#main-admin-navbar .dropdown-menu .dropdown-item.active {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+    border-color: transparent;
+}
+
+
+.table th {
+    white-space: nowrap;
+}
+
+#allTasksTableBody td:last-child { 
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+#allTasksTableBody .edit-task-btn,
+#allTasksTableBody .toggle-task-status-btn {
+    margin: 0 4px;
+    padding: .375rem .75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
+.Task {
+    width: 20%;
+    min-width: 20px;
+    white-space: normal;
+    vertical-align: top;
+}
+
+.remarks-column {
+    width: 20%;
+    min-width: 150px;
+    white-space: normal;
+    vertical-align: top;
+}
+
+.emp-remarks {
+    width: 20%;
+    min-width: 150px;
+    white-space: normal;
+    vertical-align: top;
+}
+
+/*
+ * Form and component styling
+ */
+.form-label {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    border-color: #ced4da;
+}
+
+.select2-enabled + .select2-container,
+#employeeOrganizationSelect + .select2-container {
+    width: 100% !important;
+}
+
+.form-control:disabled,
+.form-select:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.filter-pill {
+    background-color: #007bff;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.filter-pill .remove-filter {
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.filter-pill .remove-filter:hover {
+    color: white;
+}
+
+/*
+ * Task and Assignment Builder styling
+ */
+.assignment-builder {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; 
+}
+
+.dual-listbox-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dual-listbox-wrapper select {
+    width: 42%;
+    height: 150px; 
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+.dual-listbox-wrapper .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dual-listbox-wrapper .buttons button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.profile-modal-body {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.ui-datepicker {
+    z-index: 1100 !important;
+}
+
+/*
+ * Responsive adjustments
+ */
+@media (max-width: 991.98px) {
+    #main-admin-navbar .navbar-nav {
+        flex-direction: column;
+    }
+    #main-admin-navbar .ms-auto {
+        margin-left: 0 !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin-top: 10px;
+        padding-top: 15px;
+    }
+
+    .navbar-collapse.collapse.show {
+        background-color: #0069d9;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    #main-admin-navbar .navbar-nav .nav-link {
+        padding: 10px 8px;
+        margin-bottom: 4px;
+    }
+
+    #welcomeMessage {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #logoutBtn {
+        width: 100%;
+    }
+
+    .main-content-area {
+        padding: 1rem;
+    }
+
+    .content-section {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .dual-listbox-wrapper {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .dual-listbox-wrapper select {
+        width: 100%;
+        height: 120px;
+    }
+
+    .dual-listbox-wrapper .buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+#clearTaskAllocatedFiltersBtn{
+    margin-right: 9rem;
+}
